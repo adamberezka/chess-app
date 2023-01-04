@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessApp", "ChessApp\ChessApp.csproj", "{E56560EE-0586-4ABD-B56F-B7B7E1B36344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessAppServer", "ChessAppServer\ChessAppServer.csproj", "{D1EE349A-F641-4B5E-9B28-67EA0717C8A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessAppClient", "ChessAppClient\ChessAppClient.csproj", "{2718889B-ECEC-4235-836D-034419EE4738}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E56560EE-0586-4ABD-B56F-B7B7E1B36344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56560EE-0586-4ABD-B56F-B7B7E1B36344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56560EE-0586-4ABD-B56F-B7B7E1B36344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56560EE-0586-4ABD-B56F-B7B7E1B36344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EE349A-F641-4B5E-9B28-67EA0717C8A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EE349A-F641-4B5E-9B28-67EA0717C8A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EE349A-F641-4B5E-9B28-67EA0717C8A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EE349A-F641-4B5E-9B28-67EA0717C8A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2718889B-ECEC-4235-836D-034419EE4738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2718889B-ECEC-4235-836D-034419EE4738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2718889B-ECEC-4235-836D-034419EE4738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2718889B-ECEC-4235-836D-034419EE4738}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
