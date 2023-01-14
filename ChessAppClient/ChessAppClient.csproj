@@ -7,4 +7,62 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ChessApp\ChessApp.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Images\b_bishop_1x_ns.png" />
+      <None Remove="Images\b_king_1x_ns.png.tmp$$" />
+      <None Remove="Images\b_knight_1x_ns.png" />
+      <None Remove="Images\b_pawn_1x_ns.png" />
+      <None Remove="Images\b_queen_1x_ns.png" />
+      <None Remove="Images\b_rook_1x_ns.png" />
+      <None Remove="Images\square brown dark_1x_ns.png" />
+      <None Remove="Images\square brown light_1x_ns.png" />
+      <None Remove="Images\square gray dark _1x_ns.png" />
+      <None Remove="Images\square gray light _1x_ns.png" />
+      <None Remove="Images\w_bishop_1x_ns.png" />
+      <None Remove="Images\w_king_1x_ns.png" />
+      <None Remove="Images\w_knight_1x_ns.png" />
+      <None Remove="Images\w_pawn_1x_ns.png" />
+      <None Remove="Images\w_queen_1x_ns.png" />
+      <None Remove="Images\w_rook_1x_ns.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Images\b_bishop_2x_ns.png" />
+      <Resource Include="Images\b_bishop_2x_ns.png" />
+      <None Remove="Images\b_king_2x_ns.png" />
+      <Resource Include="Images\b_king_2x_ns.png" />
+      <None Remove="Images\b_knight_2x_ns.png" />
+      <Resource Include="Images\b_knight_2x_ns.png" />
+      <None Remove="Images\b_pawn_2x_ns.png" />
+      <Resource Include="Images\b_pawn_2x_ns.png" />
+      <None Remove="Images\b_queen_2x_ns.png" />
+      <Resource Include="Images\b_queen_2x_ns.png" />
+      <None Remove="Images\b_rook_2x_ns.png" />
+      <Resource Include="Images\b_rook_2x_ns.png" />
+      <None Remove="Images\square brown dark_2x_ns.png" />
+      <Resource Include="Images\square brown dark_2x_ns.png" />
+      <None Remove="Images\square brown light_2x_ns.png" />
+      <Resource Include="Images\square brown light_2x_ns.png" />
+      <None Remove="Images\square gray dark _2x_ns.png" />
+      <Resource Include="Images\square gray dark _2x_ns.png" />
+      <None Remove="Images\square gray light _2x_ns.png" />
+      <Resource Include="Images\square gray light _2x_ns.png" />
+      <None Remove="Images\w_bishop_2x_ns.png" />
+      <Resource Include="Images\w_bishop_2x_ns.png" />
+      <None Remove="Images\w_king_2x_ns.png" />
+      <Resource Include="Images\w_king_2x_ns.png" />
+      <None Remove="Images\w_knight_2x_ns.png" />
+      <Resource Include="Images\w_knight_2x_ns.png" />
+      <None Remove="Images\w_pawn_2x_ns.png" />
+      <Resource Include="Images\w_pawn_2x_ns.png" />
+      <None Remove="Images\w_queen_2x_ns.png" />
+      <Resource Include="Images\w_queen_2x_ns.png" />
+      <None Remove="Images\w_rook_2x_ns.png" />
+      <Resource Include="Images\w_rook_2x_ns.png" />
+    </ItemGroup>
+
 </Project>

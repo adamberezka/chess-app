@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="ChessAppClient.RegisterUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ChessAppClient"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">Username</TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="2" Name="UsernameTextBox"></TextBox>
+        <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Center">Password</TextBlock>
+        <PasswordBox Grid.Column="1" Grid.Row="4" Name="PasswordBox"></PasswordBox>
+        <TextBlock Grid.Column="1" Grid.Row="5" VerticalAlignment="Center">Rating</TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="6" Name="RatingTextBox"></TextBox>
+        <Button Grid.Column="1" Grid.Row="8" Click="Register_OnClick"> Register </Button>
+        <Button Grid.Column="1" Grid.Row="10" Click="BackToLogin_OnClick"> Go Back To Login </Button>
+    </Grid>
+</UserControl>
