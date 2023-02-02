@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using ChessAppClient.Communication;
 using ChessAppClient.ViewModels;
 
 namespace ChessAppClient
@@ -11,8 +12,7 @@ namespace ChessAppClient
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow app = new MainWindow();
-            // ProvideServerAddressModel context = new ProvideServerAddressModel();
-            GameViewModel context = new ();
+            ProvideServerAddressModel context = new ProvideServerAddressModel();
             app.DataContext = context;
             app.Show();
         }

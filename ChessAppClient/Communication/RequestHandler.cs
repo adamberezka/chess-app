@@ -12,9 +12,11 @@ namespace ChessAppClient.Communication;
 public class RequestHandler
 {
     private static HttpClient HttpClient = new ();
+    public static string HostAddress;
 
     public static bool SetHostAddress(string address)
     {
+        RequestHandler.HostAddress = address;
         if (!address.StartsWith("http://"))
             address = "http://" + address;
         Uri HostAddress;
@@ -36,10 +38,12 @@ public class RequestHandler
         return false;
     }
 
-    public static Boolean Register(CreateUserRequest request)
+    public static CreateUserResponse? Register(CreateUserRequest request)
     {
         var postRequest = HttpClient.PostAsJsonAsync(ChessAppApi.USER, request);
-        return postRequest.Result.StatusCode != HttpStatusCode.Conflict;
+        if (postRequest.Result.StatusCode == HttpStatusCode.Conflict)
+            return null;
+        return JsonSerializer.Deserialize<CreateUserResponse>(postRequest.Result.Content.ReadAsStringAsync().Result, new JsonSerializerOptions{PropertyNameCaseInsensitive = true});
     }
 
     public static LoginResponse? Login(LoginRequest request)
@@ -48,6 +52,6 @@ public class RequestHandler
         var httpResponseMessage = postAsync.Result;
         if (httpResponseMessage.StatusCode == HttpStatusCode.Unauthorized)
             return null;
-        return JsonSerializer.Deserialize<LoginResponse>(httpResponseMessage.Content.ReadAsStringAsync().Result);
+        return JsonSerializer.Deserialize<LoginResponse>(httpResponseMessage.Content.ReadAsStringAsync().Result, new JsonSerializerOptions{PropertyNameCaseInsensitive = true});
     }
 }

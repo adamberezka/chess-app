@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ChessAppClient.Infrastructure.Chess;
+namespace ChessApp.Chess;
 
 public abstract class Piece
 {
@@ -24,7 +24,7 @@ public abstract class Piece
 
     public abstract string GetName();
 
-    public abstract List<Move> GetMoves();
+    public abstract List<Move> GetMoves(Piece?[,] board);
 
     public enum Color
     {

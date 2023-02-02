@@ -42,8 +42,14 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Button Grid.Row="1" Grid.Column="1" Click="FindGame_OnClick"> Find Game </Button>
+            <Label Grid.Column="1" Grid.Row="1" Name="OpponentLabel">Opponent</Label>
+            <Button Grid.Row="3" Grid.Column="1" Click="FindGame_OnClick" Name="FindGameButton"> Find Game </Button>
+            <Label Grid.Column="1" Grid.Row="5" Name="YourLabel">You</Label>
         </Grid>
     </Grid>
 </UserControl>

@@ -18,6 +18,9 @@ public partial class LoginUserControl : UserControl
         var response = RequestHandler.Login(new LoginRequest(UsernameTextBox.Text, PasswordBox.Password));
         if (response != null)
         {
+            UserHolder.Id = response.Id;
+            UserHolder.Username = response.Username;
+            UserHolder.Rating = response.Rating;
             Application.Current.MainWindow.DataContext = new GameViewModel();
         }
         else
@@ -31,7 +34,7 @@ public partial class LoginUserControl : UserControl
             );
         }
     }
-    
+
     private void CreateAccount_OnClick(object sender, RoutedEventArgs e)
     {
         Application.Current.MainWindow.DataContext = new RegisterViewModel();

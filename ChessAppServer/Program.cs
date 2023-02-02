@@ -1,3 +1,4 @@
+using ChessAppServer.Infrastructure;
 using ChessAppServer.Persistence;
 using ChessAppServer.Persistence.Entities;
 using Microsoft.AspNetCore.Identity;
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddSingleton<GamesProcessor>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -24,7 +26,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // app.UseHttpsRedirection();
-
+app.UseWebSockets();
 app.UseAuthorization();
 
 app.MapControllers();

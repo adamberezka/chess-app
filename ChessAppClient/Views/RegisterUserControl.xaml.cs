@@ -18,13 +18,16 @@ public partial class RegisterUserControl : UserControl
     {
         try
         {
-            var registrationSuccessfull = RequestHandler.Register(new CreateUserRequest(
+            var registrationResponse = RequestHandler.Register(new CreateUserRequest(
                 UsernameTextBox.Text,
                 PasswordBox.Password,
                 Int32.Parse(RatingTextBox.Text)
             ));
-            if (registrationSuccessfull)
+            if (registrationResponse != null)
             {
+                UserHolder.Id = registrationResponse.Id;
+                UserHolder.Username = registrationResponse.Username;
+                UserHolder.Rating = registrationResponse.Rating;
                 Application.Current.MainWindow.DataContext = new GameViewModel();
             }
             else

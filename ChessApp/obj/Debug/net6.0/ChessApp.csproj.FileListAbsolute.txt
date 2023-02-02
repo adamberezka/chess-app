@@ -1,11 +1,11 @@
-C:\Users\adamb\RiderProjects\ChessApp\ChessApp\bin\Debug\net6.0\ChessApp.deps.json
-C:\Users\adamb\RiderProjects\ChessApp\ChessApp\bin\Debug\net6.0\ChessApp.dll
-C:\Users\adamb\RiderProjects\ChessApp\ChessApp\bin\Debug\net6.0\ChessApp.pdb
 C:\Users\adamb\RiderProjects\ChessApp\ChessApp\obj\Debug\net6.0\ChessApp.csproj.AssemblyReference.cache
 C:\Users\adamb\RiderProjects\ChessApp\ChessApp\obj\Debug\net6.0\ChessApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\adamb\RiderProjects\ChessApp\ChessApp\obj\Debug\net6.0\ChessApp.AssemblyInfoInputs.cache
 C:\Users\adamb\RiderProjects\ChessApp\ChessApp\obj\Debug\net6.0\ChessApp.AssemblyInfo.cs
 C:\Users\adamb\RiderProjects\ChessApp\ChessApp\obj\Debug\net6.0\ChessApp.csproj.CoreCompileInputs.cache
+C:\Users\adamb\RiderProjects\ChessApp\ChessApp\bin\Debug\net6.0\ChessApp.deps.json
+C:\Users\adamb\RiderProjects\ChessApp\ChessApp\bin\Debug\net6.0\ChessApp.dll
+C:\Users\adamb\RiderProjects\ChessApp\ChessApp\bin\Debug\net6.0\ChessApp.pdb
 C:\Users\adamb\RiderProjects\ChessApp\ChessApp\obj\Debug\net6.0\ChessApp.dll
 C:\Users\adamb\RiderProjects\ChessApp\ChessApp\obj\Debug\net6.0\refint\ChessApp.dll
 C:\Users\adamb\RiderProjects\ChessApp\ChessApp\obj\Debug\net6.0\ChessApp.pdb
