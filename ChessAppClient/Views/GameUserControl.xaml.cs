@@ -37,7 +37,7 @@ public partial class GameUserControl : UserControl
     public GameUserControl()
     {
         chosenPieceRect.Stroke = new SolidColorBrush(Colors.Red);
-        chosenPieceRect.StrokeThickness = 2;
+        chosenPieceRect.StrokeThickness = 4;
         InitializeComponent();
         InitializeChessBoard();
         YourLabel.Content = $"{UserHolder.Username} ({UserHolder.Rating})";
@@ -126,6 +126,9 @@ public partial class GameUserControl : UserControl
 
     private async void ChessBoardGrid_OnMouseDown(object sender, MouseButtonEventArgs e)
     {
+        if (ChessBoard == null)
+            return;
+        
         if (playerToMove != playerColor)
             return;
 
@@ -149,7 +152,7 @@ public partial class GameUserControl : UserControl
             {
                 Rectangle rect = new Rectangle();
                 rect.Stroke = new SolidColorBrush(Colors.Yellow);
-                rect.StrokeThickness = 2;
+                rect.StrokeThickness = 4;
                 Grid.SetColumn(rect, move.ColTo);
                 Grid.SetRow(rect, move.RowTo);
                 ChessBoardGrid.Children.Add(rect);
@@ -314,9 +317,13 @@ public partial class GameUserControl : UserControl
                         inGame = false;
                         var colorWon = gameOverMessage.ColorWon == 0 ? "WHITE" : "BLACK" ;
                         
-                        bool isWon = gameOverMessage.ColorWon == 0
+                        bool? isWon = gameOverMessage.ColorWon == 0
                             ? playerColor == Piece.Color.WHITE
                             : playerColor == Piece.Color.BLACK;
+
+                        if (gameOverMessage.ColorWon == 2)
+                            isWon = null;
+                        
                         int ratingChange = RatingChangeCalculator.ratingChange(UserHolder.Rating, UserHolder.OpponentRating, isWon);
                         UserHolder.Rating += ratingChange;
                         YourLabel.Content = $"{UserHolder.Username} ({UserHolder.Rating})";

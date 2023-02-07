@@ -65,6 +65,7 @@ public class GameInProgress
                         );
                         gameEnded = true;
                         UpdateRatings(Piece.Color.BLACK);
+                        break;
                     }
                     else if (whiteMessage is WebSocketMoveMessage moveMessage && _playerToMove == White)
                     {
@@ -91,6 +92,7 @@ public class GameInProgress
                                 );
                                 gameEnded = true;
                                 UpdateRatings(Piece.Color.WHITE);
+                                break;
                             }
                             else
                             {
@@ -109,6 +111,7 @@ public class GameInProgress
                                         WebSocketMessageType.Text, true, CancellationToken.None
                                     );
                                     gameEnded = true;
+                                    break;
                                 }
                             }
                         }
@@ -136,6 +139,7 @@ public class GameInProgress
                         );
                         gameEnded = true;
                         UpdateRatings(Piece.Color.WHITE);
+                        break;
                     }
                     else if (blackMessage is WebSocketMoveMessage moveMessage && _playerToMove == Black)
                     {
@@ -162,6 +166,7 @@ public class GameInProgress
                                 );
                                 gameEnded = true;
                                 UpdateRatings(Piece.Color.BLACK);
+                                break;
                             }
                             else
                             {
@@ -180,13 +185,12 @@ public class GameInProgress
                                         WebSocketMessageType.Text, true, CancellationToken.None
                                     );
                                     gameEnded = true;
+                                    break;
                                 }
                             }
                         }
                     }
                 }
-
-                Thread.Sleep(100);
             }
 
             await White.WebSocketConnection.CloseOutputAsync(WebSocketCloseStatus.NormalClosure, String.Empty,
